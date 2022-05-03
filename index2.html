@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bbn</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Font Awesome -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+	rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet"
+	/>
+	<!-- MDB -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+	rel="stylesheet"
+	/>
+
+
+	<!-- MDB -->
+	<script
+	type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"
+	></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- MDB core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+	
+
+	<style type="text/css">
+		.bdy2{
+			box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+		}
+		.bdy2 h4{
+			padding: 10px;
+			font-size: 2rem;
+			font-weight: 900;
+
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.bdy3{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.bdy4{
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.aa{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
+			font-size: 2rem;
+			font-weight: 900;
+			margin-bottom: 5px;
+		}
+		.bg1{
+			background: #a4e5fb;
+			color: white;
+		}
+		.bg2{
+			background: #9c27b0;
+			color: white;
+		}
+		#qstn{
+			display: none;
+		}
+		.rlqstn{
+			display: flex;
+			align-items: center;
+		}
+		.rlqstn p, .rlqstn2 p{
+			font-size: 25px;
+			/*color: #fff;*/
+		}
+		.ans{
+			position: absolute;
+			bottom: 0px;
+		}
+		#anss{
+			display: none;
+		}
+	</style>
+
+</head>
+
+<body>
+
+
+	<div class="container-fluid bdy2" id="fst">
+		<header>
+			<a href="index.html" style="color:#000;">
+				<h4>
+					<script type="text/javascript">
+						var arr = [1];
+
+						var today = new Date();
+						var time = today.getHours();
+
+						arr.every(function(element) {
+
+							if (time < 12) {
+								document.write("Good Moring annie");
+							} else if (time < 16) {
+								document.write("Good Afternoon annie");
+							} else if (time < 21) {
+								document.write("Good Evening annie");
+							} else {
+								document.write("Good Night annie");
+							}
+						});
+					</script>
+				</h4>
+			</a>
+		</header>
+	</div> 
+
+
+
+	<div class="container bdy3" id="snd">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="co-lg-6 col-md-6 col-sm-6" id="trth" onclick="hideshow()">
+					<div class="aa bg1">Truth</div>
+				</div>
+				<div class="co-lg-6 col-md-6 col-sm-6" id="dare">
+					<div class="aa bg2" onclick="dareqstn()">Dare</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="container" id="qstn">
+		<div class="col-md-12 rlqstn" id="Copy" onclick="copyEvent('Copy')">
+			<p id="result"></p>
+		</div>
+
+		<div class="ans">
+			<h5>Please send the answer in whatsapp</h5>
+		</div>
+	</div>
+
+	<div class="container" id="qstn2">
+		<div class="col-md-12 rlqstn2"id="Copy2" onclick="copyEvent('Copy2')">
+			<p id="result2"></p>
+		</div>
+
+		<div class="ans" id="anss">
+			<h5>Please send the answer in whatsapp</h5>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		function hideshow() {
+			document.getElementById('qstn').style.display = "block";
+			document.getElementById('snd').style.display = "none";
+
+			idArray = new Array()
+
+			idArray [1] = "Do you prefer making 0ut or cuddling?"
+
+			idArray [2] = "Have you ever wanted to role-play?"
+
+			idArray [3] = "What is the best kiss you have ever had?"
+
+			idArray [4] = "Where do you like to be touched?"
+
+			idArray [5] = "What is your type?"
+
+			idArray [6] = "How do you feel about kissing in public?"
+
+			idArray [7] = "What do you think about me when we are not together?"
+
+			idArray [8] = "Have you ever tried to picture me n*ked?"
+
+			idArray [9] = "What is your opinion on a boy making the first move?"
+
+			idArray [10] = "Do you think lovemaking should happen anywhere, not just in a bed?"
+
+			idArray [11] = "Are there any moves that you’ve never tried but always wanted to?"
+
+			idArray [12] = "What are three places you’d do it outside of a home?"
+
+			idArray [13] = "What is one outfit you’d like to see me in?"
+
+			idArray [14] = "What do you wear to bed?"
+
+			idArray [15] = "If I was a motorcycle, would you want to ride on the front or on the back?"
+
+			idArray [16] = "Do you like having your hair pulled?"
+
+			idArray [17] = "Where is your favorite lovemaking(insert your dirty word) sp0t?"
+
+			idArray [18] = "Do you like biting?"
+
+			idArray [19] = "Do you think you know what I want?"
+
+			idArray [20] = "Do you like scratching?"
+
+			idArray [21] = "Who is your dream guy/girl, if you couldn’t have me?"
+
+			idArray [22] = "Do you like being teased?"
+
+			idArray [23] = "What part of my body would you want me to tattoo?"
+
+			idArray [24] = "What is your favorite thing about my body?"
+
+			idArray [25] = "How many guys/girls have u been with, before me?"
+
+			idArray [26] = "Are you a v*rg*n?"
+
+			idArray [27] = "What physical features are you attracted to the most in men/women?"
+
+			idArray [28] = "If I asked you to make a bedroom bucket list for me to fulfill, would you?"
+
+			idArray [29] = "Do you consider yourself more s3xy or brainy?"
+
+			idArray [30] = "Do you have any secret fantasies?"
+
+			idArray [31] = "What is the first feature you noticed of mine?"
+
+			idArray [32] = "Could you please lend a hand?"
+
+			idArray [33] = "Would you ever sh0wer with me?"
+
+			idArray [34] = "What is your favorite position?"
+
+			idArray [35] = "If we’re out shopping for clothes, would you sneak into a fitting room with me?"
+
+			idArray [36] = "What is your most embarrassing mak3-out memory?"
+
+			idArray [37] = "Have you ever done it in a public place?"
+
+			idArray [38] = "Do you want to do it in a public place?"
+
+			idArray [39] = "If you could choose one celebrity to mak3-out with who would it be and why?"
+
+			idArray [40] = "How do you want me?"
+
+			idArray [41] = "Would it drive you wild if I whispered naughty things into your ear?"
+
+			idArray [42] = "Would you flash me?"
+
+			idArray [43] = "If I bought you lingerie, would you model it for me?"
+
+			idArray [44] = "Do you prefer eye contact or not?"
+
+			idArray [45] = "How many positions do you think you’ve tried?"
+
+			idArray [46] = "What’s a surefire way to turn you 0N?"
+
+			idArray [47] = "Do you prefer lights on or lights off?"
+
+			idArray [48] = "Do you like dirty talk?"
+
+			idArray [49] = "Do you like s*xting?"
+
+			idArray [50] = "What do you wear to bed when you are in the M00D?"
+
+			idArray [51] = "Have you ever sent someone a naughty picture?"
+
+			idArray [52] = "Would you ever send me a naughty picture?"
+
+			idArray [53] = "Have you ever had ONS?"
+
+			idArray [54] = "Is there anything you’re too nervous to tell me in person?"
+
+			idArray [55] ="If I was in your room right now, what would you want to do to m3?"
+
+			idArray [56] = "Would you like to know how I feel about you?"
+
+			idArray [57] = "What is the weirdest thing you dreamt of doing with a guy?"
+
+			idArray [58] = "Want to come over later?"
+
+			idArray [59] = "Have you ever been in a friend with benefits situation?"
+
+			idArray [60] = "Are you thinking about me?"
+
+			idArray [61] = "What are you thinking about right now?"
+
+			idArray [62] = "Would you ever sl33p with your best friend?"
+
+			idArray [63] = "You feel my hand going down your back. How do you react?"
+
+			idArray [64] = "Say we have 20 minutes to spend together. What do we do?"
+
+			idArray [65] = "If we could be together anywhere right now, where would it be?"
+
+			idArray [66] = "What’s one thing you want me to do that I have not yet?"
+
+			idArray [67] = "Want to exchange pics?"
+
+			idArray [68] = "Is laughing in the bedroom okay, or it has to be serious?"
+
+			idArray [69] = "What are you wearing right now?"
+
+			idArray [70] = "Am I going to get lucky later?"
+
+			idArray [71] = "Do you prefer to give or r3c3ive?"
+
+			idArray [72] = "What do you want me to be w3aring right now?"
+
+			idArray [73] = "What is the dirtiest thing you ever thought about me?"
+
+			idArray [74] = "Do you want to play dirty truth or dare?"
+
+			idArray [75] = "What would you say or do if I s3nt you a dirty picture of m3?"
+
+			idArray [76] = "Do you like it when I make the first move (in b3d)?"
+
+			idArray [77] = "I come home from work stressed, how do you relax me?"
+
+			idArray [78] = "What is your biggest turn 0n?"
+
+			idArray [79] = "Can you send me a link to something s*xy you would wear for me?"
+
+			idArray [80] = "Do you like experimenting with different p0siti0ns, which is your favorite?"
+
+			idArray [81] = "What is your opinion on love b*t3s, do you want to give me any?"
+
+			idArray [82] = "R0ugh or romantic?"
+
+			idArray [83] = "When was the last time you had a dirty dream?"
+
+			idArray [84] = "If you could have s*x anywhere in the world, where would it be?"
+
+			idArray [85] = "What’s your favorite sex toy?"
+
+			idArray [86] = "Do you think you could take off my underw3@r with no hands?"
+
+			idArray [87] = "Have you ever been caught having s*x?"
+
+			idArray [88] = "Do you want to know what I’m wearing?"
+
+			idArray [89] = "Do you watch p*rn?"
+
+			idArray [90] = "How fast can you get here?"
+
+			idArray [91] = "Name a position you’d like to try?"
+
+			idArray [92] = "Do you like playing r0ugh?"
+
+			idArray [93] = "Are you loud or quiet during ____?"
+
+			idArray [94] = "Do you have dreams about me?"
+
+			idArray [95] = "What color underwe@r do you like the most on me?"
+
+			idArray [96] = "What body part do you like me to touch the most?"
+
+			idArray [97] = "What’s your favorite positi0n for us?"
+
+			idArray [98] = "If you could choose anything on my b0dy to see right now what would it be?"
+
+			idArray [99] = "Have you ever had back door fun?"
+
+			idArray [100] = "Have you ever kissed someone of the same gender?"
+
+			idArray [101] = "Does naughty talk get you naughty?"
+
+			idArray [102] = "What’s the dirtiest text you’ve ever sent or received?"
+
+			idArray [103] = "Pro or Amtr?"
+
+			idArray [104] = "What’s your favorite B-J technique?"
+
+			idArray [105] = "Do you ever read er0t*c fiction?"
+
+			idArray [106] = "With lights on or lights off?"
+
+			idArray [107] = "Do you prefer eye contact or not?"
+
+			idArray [108] = "Would you dress up for me in b3d?"
+
+			idArray [109] = "Qu*ck*e or marathon session?"
+
+			idArray [110] = "Is there anything you won’t do?"
+
+			document.getElementById("trth").onclick = hideshow;
+			randomParagraph = Math.floor(Math.random()*110);
+
+			document.getElementById("result").innerHTML = idArray[randomParagraph + 1];
+		}
+
+		 function copyEvent(id)
+    {
+        var str = document.getElementById(id);
+        window.getSelection().selectAllChildren(str);
+        document.execCommand("Copy")
+    }
+     function copy2Event(id)
+    {
+        var str = document.getElementById(id);
+        window.getSelection().selectAllChildren(str);
+        document.execCommand("Copy2")
+    };
+
+		function dareqstn()
+		{ 
+			document.getElementById('qstn2').style.display = "block";
+			document.getElementById('anss').style.display = "block";
+			document.getElementById('snd').style.display = "none";
+
+			idArray = new Array()
+
+			idArray [1] = "Make your “O” face."
+
+			idArray [2] = "Reenact your special move."
+
+			idArray [3] = "Make out with your pillow for 10 seconds."
+
+			idArray [4] = "Act out the last time you did it."
+
+			idArray [5] = "Act out the first time you did it."
+
+			idArray [6] = "Attempt to twerk."
+
+			idArray [7] = "Lap dance on a chair."
+
+			idArray [8] = "Send a video of you doing a sexy dance to a non-sexual song to your closest friend."
+
+			idArray [9] = "Do a sexy dance with a broom."
+
+			idArray [10] = "Reenact the opposite gender in bed."
+
+			idArray [11] = "Suck your finger passionately for 15 seconds."
+
+			idArray [12] = "Pretend you’re giving a formal presentation about a detailed summary of how you like it in bed."
+
+			idArray [13] = "Try to take off your underwear/bra without flashing."
+
+			idArray [14] = "Give your best “ready for you” face."
+
+			idArray [15] = "Incorporate a towel into a seductive dance."
+
+			idArray [16] = "Seductively shave one of your legs."
+
+			idArray [17] = "Fake an orgasm."
+
+			idArray [18] = "Crawl on the ground seductively."
+
+			idArray [19] = "Give the closest thing to your left a passionate kiss."
+
+			idArray [20] = "Make out with yourself in the mirror."
+
+			idArray [21] = "Give a speech like you’re hitting on someone."
+
+			idArray [22] = "Take a video of you spanking yourself."
+
+			idArray [23] = "Pretend you’re doing the deed with the closest thing to your right."
+
+			idArray [24] = "Put on your sexiest song and catwalk and send it as a video."
+
+			idArray [25] = "Demonstrate how to put a protection on and send it as a video."
+
+			idArray [26] = "Grind on a pillow for 20 seconds."
+
+			idArray [27] = "Take your pants off."
+
+			idArray [28] = "Send a sexy text to your third contact."
+
+			idArray [29] = "Change your Facebook status to “single and ready to mingle” or “ready for head tonight"
+
+			idArray [30] = "Leave a dirty voicemail for your."
+
+			idArray [31] = "Text your best friend and ask for sex tips."
+
+			idArray [32] = "Text your bf and ask if there’s anything you can improve on in bed."
+
+			idArray [33] = "Take off your shirt and swing it in the air."
+
+			idArray [34] = "Put on the sexist outfit you own."
+
+			idArray [35] = "In a video, demonstrate the most flexible position you can do."
+
+			idArray [36] = "Change your Facebook status to “wanting quick hookup”"
+
+			idArray [37] = "Send your dirtiest text with three sexy emojis."
+
+			idArray [38] = "Describe yourself seductively."
+
+			idArray [39] = "Do the WAP dance and send it to your partner."
+
+			idArray [40] = "Tell your partner or crush that they are a “leg spreader”"
+
+			idArray [41] = "Text a random person and ask them if they think you’re hot."
+
+			idArray [42] = "Talk without opening your mouth."
+
+			idArray [43] = "Do your best moan or grunt."
+
+			idArray [44] = "Eat a banana in a seductive manner."
+
+			idArray [45] = "Write your partner’s name on your underwear in sharpie and send it to them."
+
+			idArray [46] = "Comment on your celebrity crush’s post and say you get turned on by them."
+
+			idArray [47] = "Tweet your crush and explain to them that you think of them in bed."
+
+			idArray [48] = "Demonstrate your biggest turn-on."
+
+			idArray [49] = "Demonstrate your biggest turn-off."
+
+			idArray [50] = "Send a picture as if you were on top."
+
+			idArray [51] = "Send a picture of you praying on your knees."
+
+			idArray [52] = "Tell your partner that you want to try a different position."
+
+			idArray [53] = "Call someone and explain your biggest turn-on."
+
+			idArray [54] = "Change your Facebook status to “lonely tonight."
+
+			idArray [55] = "Take a screenshot of your text log."
+
+			idArray [56] = "Send a link to your favourite adult site."
+
+			idArray [57] = "Explain your favourite videos and why."
+
+			idArray [58] = "Demonstrate your wildest fantasies."
+
+			idArray [59] = "Send a voice message of you moaning to your partner."
+
+			idArray [60] = "Drop an ice cube in your pants."
+
+			idArray [61] = "Send a winky face to your most recent contact."
+
+			idArray [62] = "Send the drooling emoji to your bf."
+
+			idArray [63] = "Send a voice message of your dirtiest thoughts."
+
+			idArray [64] = "Text like you are doing the deed right now."
+
+			idArray [65] = "Pour a drink into your mouth."
+
+			idArray [66] = "Send a video of you seductively dancing to a friend."
+
+			idArray [67] = "Create a sex playlist and share it with your most recent caller."
+
+			idArray [68] = "Send a video of you slowly picking up something to your partner."
+
+			idArray [69] = "Without you in the frame, send a video of you throwing your clothes across the room."
+
+			document.getElementById("dare").onclick = dareqstn;
+			randomParagraph = Math.floor(Math.random()*69);
+
+			document.getElementById("result2").innerHTML = idArray[randomParagraph + 1];
+		}
+	</script>
+
+
+
+
+</body>
+</html>
+
